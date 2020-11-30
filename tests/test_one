@@ -1,0 +1,32 @@
+from App.is_alive_host import is_alive_host
+
+
+def test_alive_host():
+    assert is_alive_host('http://www.staggeringbeauty.com/')
+    assert is_alive_host('https://jacksonpollock.org/')
+    assert is_alive_host('http://www.movenowthinklater.com/')
+    assert is_alive_host('http://www.partridgegetslucky.com/')
+    assert is_alive_host('https://alwaysjudgeabookbyitscover.com/')
+    assert is_alive_host('https://weirdorconfusing.com/')
+    assert is_alive_host('https://postnauka.ru/lists/91061')
+    assert is_alive_host('https://simple-fauna.ru/wild-animals/kvokka/')
+    assert is_alive_host('https://wikigrib.ru/grib/slizeviki/')
+    assert is_alive_host('https://discord.com/%20cnhfybwf%20yt%20yfqltyf/')
+    assert is_alive_host('https://vebk.ru/try/')
+
+
+def test_down_host():
+    assert not is_alive_host('')
+    assert not is_alive_host('https://https://githuber.com/')
+    assert not is_alive_host('http://rabota_ds.gk-rte.ru/err')
+    assert not is_alive_host('https://kickpointest.ca/creem')
+    assert not is_alive_host('https://panoravenshit.com/bird')
+    assert not is_alive_host('http://47.21.0.44/')
+    assert not is_alive_host('https://www.yelp.cor/')
+    assert not is_alive_host('https://railswarede.com/lost/')
+    assert not is_alive_host('http://www.e-co.rus/power/')
+    assert not is_alive_host('https://en.wikipediaia.org/wiki/Astragalus')
+
+
+test_alive_host()
+test_down_host()
